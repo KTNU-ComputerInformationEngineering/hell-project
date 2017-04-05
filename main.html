@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<title>profect homepage</title>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   $("#main_slider").slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      /*fade: true,*/
+      cssEase: 'linear',
+      adaptiveHeight: true,
+      autoplay: true,
+        autoplaySpeed: 5000
+   });
+
+   $("#main_slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $(".main_banner").css("background-color",$("#slick"+nextSlide).data("bg_color"));
+   });
+})
+</script>
+
+</head>
+<body>
+<style>
+.layer_contnet{
+min-width:230px;
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -24px;
+}
+.check_close{
+clear:both;
+height:24px;
+background-color:#000;
+font-family:'Dotum','돋움';
+font-size:12px;
+color:#fff;
+}
+</style>
+<script>
+function setCookie( name, value, expiredays ) 
+{ 
+   var todayDate = new Date(); 
+   todayDate.setDate( todayDate.getDate() + expiredays ); 
+   document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+}
+function getCookie(cname)
+{
+   var name = cname + "=";
+   var ca = document.cookie.split(';');
+   for(var i=0; i<ca.length; i++) 
+   {
+      var c = $.trim(ca[i]);
+      if (c.indexOf(name)==0){
+         return c.substring(name.length,c.length);
+      }
+   }
+   return "";
+}
+$(document).ready(function(){
+   $(".close_layer").click(function(){
+      $(this).parent().parent().parent().css("display","none");
+   });
+   
+   $(".close_today").click(function(){
+      if($(this).is(":checked") == true){
+         setCookie("layer"+$(this).val(), "N", 1);
+         $(this).parent().parent().parent().css("display","none");
+      }
+   });
+
+});
+
+</script>
+
+  <!--wrap-->
+   <div id="wrap">
+      <!--header-->
+     <div id="header">
+    <script src="http://image.softapp.co.kr/js/jquery.motionj.rolling.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#rolling_box').motionj_rolling_vertical({
+            width : 620, // 배너의 너비
+            height : 33, // 배너의 높이
+            max_view : 1, // 초기에 보일 배너의 갯수
+            speed : 3000 // 속도
+        });
+        $("#search_btn").click(function(){
+            location.href="/?page=sub_search&sv="+$("#sv").val();
+        })
+        $("#sv").keyup(function(e){
+            if(e.which == "13"){
+                e.preventDefault();
+                $("#search_btn").trigger("click");
+            }
+        });
+    })
+    </script>
+   <div class="top_title">
+        <div class="top_title1">
+           <div class="ad" id="rolling_box">
+          
+           <ul>
+           
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="#" target="_blank" style="color:#fff"><b>광고베너</b></a></span>
+                </li>
+                
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="http://bukyung.pamm.co.kr/" target="_blank" style="color:#fff"><b>광고베너2</b></a></span>
+                </li>
+                
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="#" target="_blank" style="color:#fff"><b>광고베너3</b></a></span>
+                </li>
+                
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="http://topred.co.kr" target="_blank" style="color:#fff"><b>광고베너3</b></a></span>
+                </li>
+                
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="http://minho77.softp.co.kr" target="_blank" style="color:#fff"><b>광고베너4</b></a></span>
+                </li>
+                
+             </ul>
+         
+           <!--//광고나오는곳-->
+          </div><!--//광고-->
+          <div class="gnb">
+            <ul>
+            
+               <li><a href="/?page=member/login">로그인</a></li>
+               <li><a href="C:\Users\hahyun\Desktop\project\회원가입.html">회원가입</a></li>
+             <li><a href="javascript:goToLogin();">마이페이지</a></li>
+                <li><a href="/?page=cscenter">고객센터</a></li>
+            </ul>
+          </div><!--//네비-->
+        </div><!--top_title1-->
+      </div><!--top_title-->
+
+      <div class="header_wrap">
+   
+         <div class="header_logo"><a href="/index.asp">
+            
+               <img src="/upload/logo/top_logo.png" alt="로고"/>
+               
+         </a></div><!--로고-->
+         <div class="header_search"><!--검색박스-->
+          <div class="input_box">
+              <div class="search_box"><input id="sv" type="text" class="text_input" value=""/></div>
+              <div class="search_box1"><img src="#" style="cursor: pointer;" id="search_btn"/></div>
+         </div>
+      </div><!--//header_search-->
+        <div class="help_desk">
+        
+        </div>
+      <div class="lnb">
+           <ul>
+            
+                 <li><a href="/?page=sub&cate_code=01">HOME</a></li>
+                
+                 <li><a href="/?page=sub&cate_code=02">오늘의 추천메뉴</a></li>
+                
+                 <li><a href="/?page=sub&cate_code=03">검색하기</a></li>
+                
+                 <li><a href="/?page=sub&cate_code=04">카테고리</a></li>
+                
+                 <li><a href="/?page=sub&cate_code=05">나만의 블로그</a></li>
+
+                 <li><a href="/?page=sub&cate_code=06">고객센터</a></li>
+         </ul>
+      </div><!--lnb-->
+      </div>
+</div>
+     <!--//header-->
+
+     <!--content-->
+     <img src="#" width="1000" />
+     <div id="content">
+            
+         <div class="main_banner" style="background-color:;">
+          <div id="main_slider" style="position:relative;width:1000px;margin: 0 auto;">
+            
+              <div data-bg_color="" id="slick0">
+           <div></div>
+           <!-- 텍스트-->
+           <div class="main_text">
+             <p class="top_text"></p>
+              <p class="middle_text"></p>
+            <p class="foter_text"></p>
+           </div><!--텍스트-->
+              </div>
+              
+            </div>
+      </div><!--//main_banner-->
+            
+        <div class="content_wrap">
+
+
+         <!-- 메인 컨텐츠 출력 -->
+         
+<div class="new_product">
+    <div class="new_title"><img src="#" width="1000" height="39" alt="타이틀이미지"/></div>
+   <script>
+      $(document).ready(function(){
+      $('#best_item').bxSlider({
+         minSlides: 4,
+         maxSlides: 4,
+         slideWidth: 250,
+         moveSlides : 1,
+         pager : false,
+         prevSelector : "#best_prev",
+         nextSelector : "#best_next",
+         prevText : "<img src='#' width='12' height='23'/>",
+         nextText : "<img src='#' width='12' height='23'/>"
+         });
+      })
+   </script>
+
+<div class="customer">
+    <div class="customer_title"><img src="#" width="1000" height="56" alt="타이틀이미지"/></div>
+    <div class="customer_list">
+        <ul>
+
+                  <li>
+                     <div>
+                        <div><a href="#"><img src="#" width="205" height="289" alt="이벤트" class="border"/></a></div>
+                        <div>
+                           <p class="customer_text">공지사항</p>
+                           <p class="customer_text1">새소식을 전해드립니다.</p>
+                           <p class="customer_box"><a href="#">공지사항</a></p>
+                        </div>
+                     </div>
+                  </li>
+                  <div class="footer_warp">
+                    <div class="bottom_logo"> <img src="#"/> </div>
+                    <div class="bottom_add">
+                      <p> 
+                        제작자 : BGS
+                        TEL : 010-6369-5153
+                        주소 : 경기도 의왕시 <br/>
+                       </p>
+                     </div>
+                    <div class="bottom_add soft_footer">
+                      <p>
+                        제작자 : BGS
+                              TEL : 031-123-4567
+                        주소 : 경기도 의왕시<br />
+
+                     </div>
+          </div>
+        </ul>
+    </div>
+</div>
+
+         <div class="notice_text">
+         <p class="quick_text_top01">&nbsp </p>
+         <span class="quick_text top_btn">TOP</span>
+         <span class="quick_text1 top_btn">위로</span>
+         </div><!--위로-->
+</div><!--퀵배너-->
+</body>
+</html>
