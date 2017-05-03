@@ -1,4 +1,4 @@
-var promiseMysql = require("promise-mysql");
+var mysql = require("./database/mysql");
 var underscore = require("underscore");
 var md5 = require("md5");   //md5 암호화 알고리즘(비밀번호 암호화 시 사용)
 
