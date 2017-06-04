@@ -1,0 +1,137 @@
+@charset utf-8;
+ CSS Document 
+
+@import url(nanumgothic.css);
+
+body{margin0; padding0; width100%; height100%; font-family'Nanum Gothic', 'nanumgothic';}
+
+#wrap{width100%; min-width1000px;}
+
+#header{width100%; background#73AB88;}
+
+#content{width100%; positionrelative; overflowhidden;  }min-height1400px;
+
+#footer{width100%; clearboth;  border-topsolid 1px #d7d7d7; overflowhidden; margin-top50px;}
+
+img{border0;}
+
+a{text-decorationnone;}
+
+
+ul{list-stylenone;
+   padding0;
+   margin0;}
+
+li{list-stylenone;
+   padding0;
+   margin0;}
+   
+p{margin0;}
+
+
+---------------------------------------
+
+header스타일
+.top_title{height27px; background-color#73AB99;}
+.top_title1{width1000px; margin0 auto; color#fff; font-size11px;}
+.header_wrap{width1000px; margin0 auto;}
+
+gnb navi   우측상단 메뉴
+.gnb{floatright; positionrelative; width380px;}
+.gnb ul{floatright;}
+.gnb li{floatleft; padding-right10px; padding-top7px; text-alignright;}
+
+gnb navi a.링크
+.gnb li a{color#fff;}
+
+
+logo
+.header_logo{aligncenter; text-aligncenter; padding-top28px;}
+
+search_box
+.header_search{overflowhidden;}
+
+.input_box{width228px;  height23px; bordersolid 1px #e0e0e0; margin-left770px;}
+.search_box{floatleft; width206px;}
+.text_input{width204px; bordernone; height21px; color #b8b8b8; padding-left2px;}
+.search_box1{floatleft; width22px;}
+
+lnb center menu style
+.lnb{color#fff; padding10px 0; height30px; line-height30px; font-weightbold; font-size0; text-aligncenter; overflowhidden;}
+.lnb li{width142px; text-aligncenter; displayinline-block; font-size16px;}
+
+lnb_navi a.링크
+.lnb li a{color#fff !important;}
+
+footer
+
+.bottom_logo{floatleft; width311px;}
+.bottom_add{floatleft; width669px; color#999; font-size11px; line-height18px; padding-top20px; padding-left20px;}
+
+soft footer
+.soft_footer{width100%; border-top1px solid #eee; margin-top20px; text-aligncenter; color#ccc;}
+.soft_footer li{positionabsolute; top30px; right0;}
+.soft_footer li img{
+  margin-left1em;
+}
+
+퀵배너
+.quick_banner{width100px; position absolute; overflowhidden;}
+
+.quick_title{border-bottomsolid 1px #e7e7e7; height38px;}
+.quick_text_top{border-bottom3px solid #000; width15px;; margin-bottom2px}
+.quick_text_top01{border-bottom3px solid #000; width15px;; margin-bottom2px; line-height 7px;}
+.quick_text{color#000; font-size12px; font-weightbold;cursor pointer;}
+.quick_text1{color#b4b4b4; font-size11px; font-weightbold; line-height18px;cursor pointer; padding-bottom5px;}
+
+.today_it{overflowhidden; height126px; padding-top8px; border-bottomsolid 1px #e7e7e7; border-topsolid 1px #e7e7e7;}
+.today_title{overflowhidden;}
+.today_img{text-aligncenter; margin-top5px;}
+
+.shop_cart{overflowhidden; border-bottomsolid 1px #e7e7e7;}
+.shop_cart_mem{overflowhidden; height226px; border-bottomsolid 1px #e7e7e7;}
+
+.quick_cart_title{overflowhidden; padding-top10px; color #eda490;}
+.quick_cart_list{overflowhidden; text-aligncenter;}
+
+.quick_btn{text-aligncenter; padding-top3px;padding-bottom 3px;}
+
+.notice{overflowhidden;}
+
+a링크
+.quick_text a{color#ecd2cd;}
+.quick_text1 a{color#b4b4b4;}
+
+하단메뉴
+.fmenu{border-bottomsolid 1px #d7d7d7;}
+
+.footer_menu{width1000px; margin0 auto; overflowhidden;  position relative;}
+.footer_menu li{floatleft; padding-left20px; font-size12px; overflowhidden; line-height30px; text-aligncenter; color#b1b1b1;}
+
+.footer_menu li alink, aactive, ahover{color#b1b1b1;}
+.footer_menu li avisited{color#b1b1b1;}
+
+content
+.content_wrap{width1000px; margin0 auto; position relative;}
+
+.main_banner{margin-top30px; position relative; overflowhidden;}
+.main_banner .bx-wrapper .bx-viewport{border0; box-shadow 0 0 0}
+.main_banner .bx-wrapper .bx-pager{positionabsolute; bottom20px;}
+.main_banner .bx-wrapper .bx-pager.bx-default-pager a{background#d9c89b; border-radius10px; border1px solid #999;}
+.main_banner .bx-wrapper .bx-pager.bx-default-pager a.active{background#fff; border1px solid #999;}
+.main_banner .bx-wrapper .bx-pager.bx-default-pager ahover{background#fff; border1px solid #999;}
+
+content
+.content_wrap{width1000px; margin0 auto; position relative;}
+
+.main_banner{margin-top30px; position relative; overflowhidden;}
+.main_banner .bx-wrapper .bx-viewport{border0; box-shadow 0 0 0}
+.main_banner .bx-wrapper .bx-pager{positionabsolute; bottom20px;}
+.main_banner .bx-wrapper .bx-pager.bx-default-pager a{background#d9c89b; border-radius10px; border1px solid #999;}
+.main_banner .bx-wrapper .bx-pager.bx-default-pager a.active{background#fff; border1px solid #999;}
+.main_banner .bx-wrapper .bx-pager.bx-default-pager ahover{background#fff; border1px solid #999;}
+
+a링크
+.new_text a{color#7c7c7c;}
+.new_text1 a{color#c0c0c0;}
+.new_text2 a{color#282828;}

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+  <tr>
+    <form action="/categorymenu" method="post">
+     <select name="menu"> //이 셀렉트 바가 분류한 음식군에서 메뉴를 보여주는 곳이에요
+      <option value="">메뉴선택</option>
+      <%
+          for(var i=0; i<rows.length; i++)
+          {
+             var oneItem = rows[i];
+     %>
+      <option value="<%=oneItem.menu%>"><%=oneItem.menu%> </option> //얘가 반복되어져서 출력되는거
+      var x= oneItem.x;
+      var y= oneItem.y;
+     <%
+   }
+   %>
+    </select>
+  </tr>
+
+<button type="submit">글쓰기</button> //클릭버튼
+</form>
+</body>
+</html>

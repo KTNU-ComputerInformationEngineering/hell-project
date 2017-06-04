@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+  <tr>
+    <form action="/categorymenu" method="post">
+     <select name="menu">
+      <option value="">메뉴선택</option>
+      <%
+          for(var i=0; i<rows.length; i++)
+          {
+             var oneItem = rows[i];
+     %>
+      <option value="<%=oneItem.menu%>"><%=oneItem.menu%> </option>
+      var x= oneItem.x;
+      var y= oneItem.y;
+     <%
+   }
+   %>
+    </select>
+  </tr>
+
+<button type="submit">글쓰기</button> 
+</form>
+</body>
+</html>

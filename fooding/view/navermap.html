@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" type="text/css" href="http://image.softapp.co.kr/skin/shop/shopwo/css/default.css" />
+<link rel="stylesheet" type="text/css" href="http://image.softapp.co.kr/skin/shop/shopwo/css/include.css" />
+<link rel="stylesheet" type="text/css" href="http://image.softapp.co.kr/skin/shop/shopwo/css/main.css" />
+<link rel="stylesheet" type="text/css" href="http://image.softapp.co.kr/skin/shop/shopwo/css/jquery.bxslider.css" />
+<link rel="stylesheet" type="text/css" href="http://image.softapp.co.kr/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="http://image.softapp.co.kr/css/slick-theme.css" />
+
+<title>project homepage</title>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=DkzkX31ZFQb5VCAJ1WGj"></script>
+<!-- CSS styles for standard search box -->
+<style type="text/css">
+	#tfheader{
+		background-color:#c3dfef;
+	}
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+</style>
+
+</head>
+
+<script>
+function setCookie( name, value, expiredays )
+{
+	var todayDate = new Date();
+	todayDate.setDate( todayDate.getDate() + expiredays );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++)
+	{
+		var c = $.trim(ca[i]);
+		if (c.indexOf(name)==0){
+			return c.substring(name.length,c.length);
+		}
+	}
+	return "";
+}
+$(document).ready(function(){
+	$(".close_layer").click(function(){
+		$(this).parent().parent().parent().css("display","none");
+	});
+
+	$(".close_today").click(function(){
+		if($(this).is(":checked") == true){
+			setCookie("layer"+$(this).val(), "N", 1);
+			$(this).parent().parent().parent().css("display","none");
+		}
+	});
+
+});
+</script>
+	<!--wrap-->
+	<div id="wrap">
+	<!--header-->
+	<div id="header">
+	<script src="http://image.softapp.co.kr/js/jquery.motionj.rolling.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#rolling_box').motionj_rolling_vertical({
+			width : 620, // 배너의 너비
+			height : 33, // 배너의 높이
+			max_view : 1, // 초기에 보일 배너의 갯수
+			speed : 3000 // 속도
+		});
+		$("#search_btn").click(function(){
+			location.href="/?page=sub_search&sv="+$("#sv").val();
+		})
+		$("#sv").keyup(function(e){
+			if(e.which == "13"){
+				e.preventDefault();
+				$("#search_btn").trigger("click");
+			}
+		});
+	})
+    </script>
+	<div class="top_title">
+		<div class="top_title1">
+			<div class="ad" id="rolling_box">
+    		<ul>
+            	<li>
+                <span><img src="#" width="30" height="27"/></span>
+				<span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="#" target="_blank" style="color:#fff"><b>광고베너</b></a></span>
+				</li>
+
+				<li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="http://bukyung.pamm.co.kr/" target="_blank" style="color:#fff"><b>광고베너2</b></a></span>
+                </li>
+
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="#" target="_blank" style="color:#fff"><b>광고베너3</b></a></span>
+                </li>
+
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="http://topred.co.kr" target="_blank" style="color:#fff"><b>광고베너3</b></a></span>
+                </li>
+
+                <li>
+                <span><img src="#" width="30" height="27"/></span>
+                <span class="ad_text"><strong>광고&nbsp;|&nbsp;</strong></span>
+                <span class="ad_text"><a href="http://minho77.softp.co.kr" target="_blank" style="color:#fff"><b>광고베너4</b></a></span>
+				</li>
+			</ul>
+			</div><!--//class ad-->
+			<div class="gnb"><!--우측 베너-->
+				<ul>
+            	<li><a href="C:\Users\hahyun\fuck\login.html">로그인</a></li>
+				<li><a href="C:\Users\hahyun\fuck\회원가입.html">회원가입</a></li>
+				<li><a href="javascript:goToLogin();">마이페이지</a></li>
+				<li><a href="/?page=cscenter">고객센터</a></li>
+				</ul>
+			 </div><!--//우측 베너-->
+		</div><!--top_title1-->
+	</div><!--top_title-->
+
+	<div class="header_wrap">
+		<div class="header_logo"><a href="/">
+			<img src="/imgs" alt="로고"/>
+			</a></div><!--로고-->
+		<div class="header_search"><!--검색박스-->
+			<div class="input_box">
+			<div class="search_box">
+            	<input id="sv" type="text" class="text_input" value="" align="right"></div><!--우측 검색 칸-->
+			<div class="search_box1"><img src="#" style="cursor: pointer;" id="search_btn"/></div>
+		</div><!--//header_search-->
+	</div><!--//header_wrap-->
+
+    <div class="lnb"><!--Center menu-->
+		<ul>
+		<li><a href="/?page=sub&cate_code=01">HOME</a></li>
+		<li><a href="/?page=sub&cate_code=02">오늘의 추천메뉴</a></li>
+		<li><a href="/?page=sub&cate_code=03">검색하기</a></li>
+        <li><a href="/?page=sub&cate_code=04">카테고리</a></li>
+        <li><a href="/?page=sub&cate_code=05">나만의 블로그</a></li>
+		<li><a href="/?page=sub&cate_code=06">고객센터</a></li>
+		</ul>
+	</div><!--lnb//center_menu-->
+</div><!--//header-->
+</div>
+	  <!--content-->
+	  <div id="content">
+
+<div id="map" style="width:50%;height:400px;"></div>
+<div><p><%=topic.menu%>를 맛있게 잘하는 집</p>
+	<p><%=topic.name%>입니다</p>
+</div>
+
+
+
+<div class="new_title"><img src="/<%=topic.idx%>" height="300" alt="타이틀이미지"/></div>
+
+
+<script>
+var HOME_PATH = window.HOME_PATH || '.';
+
+var cityhall = new naver.maps.LatLng(<%=topic.x%>, <%=topic.y%>),
+    map = new naver.maps.Map('map', {
+        center: cityhall.destinationPoint(0, 300),
+        zoom: 10
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: cityhall
+    });
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>상호명: <%=topic.name%></h3>',
+        '   <p>주소: <%=topic.address%><br />',
+        '   <p>전화번호: <%=topic.tel%><br />',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
+
+</script>
+
+      </div>
+
+
+
+			<a href="/board/write">글쓰기로 이동</a>
+			<br>
+			<br>
+
+			<table border="1">
+			    <tr>
+						<td>번호</td>
+						<td>음식점명</td>
+						<td>작성자</td>
+						<td>제목</td>
+			    </tr>
+
+			<%
+			     for(var i=0; i<topic2.length; i++)
+			     {
+			        var oneItem = topic2[i];
+			%>
+			    <tr>
+						<td><%=oneItem.idx%></td>
+						<td><%=oneItem.resname%></td>
+						<td><%=oneItem.creator_id%></td>
+						<td><a href="/board/read/<%=oneItem.idx%>"><%=oneItem.title%></a></td>
+			    </tr>
+
+			<%
+			     }
+			%>
+			</table>
+
+
+
+
+<div class="footer_warp">
+	<div class="bottom_logo"> <img src="#"/> </div>
+		<div class="bottom_add"></div>
+	</div>
+	<div class="bottom_add soft_footer">
+		<p>
+			제작자 : 컴퓨터 정보공학과 BGS
+			TEL : 031-123-4567
+			주소 : 경기도 의왕시<br>
+		</p>
+	</div>
+</div>
+
+<div class="notice_text">
+	<p class="quick_text_top01">&nbsp </p>
+	<span class="quick_text top_btn">TOP</span>
+	<span class="quick_text1 top_btn">위로</span>
+	</div><!--위로-->
+</div><!--퀵배너-->
+</body>
+</html>

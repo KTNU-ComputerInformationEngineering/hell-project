@@ -1,0 +1,26 @@
+{
+  "name": "fooding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "gps": "^0.2.0",
+    "jade": "^1.11.0",
+    "node-mysql": "^0.4.2",
+    "request": "^2.81.0",
+    "serialport": "^4.0.7",
+    "uglify-js": "^2.8.21",
+    "underscore": "^1.8.3",
+    "window": "^3.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

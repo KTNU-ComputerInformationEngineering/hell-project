@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=menu%>가 있는 음식점 목록입니다</title>
+    <link rel='stylesheet' type='text/css' href='/stylesheets/style.css'/>
+</head>
+<body>
+
+
+<p><%=menu%>가 있는 음식점 목록입니다</p> //<%=menu>가 서버에서 받아온 메뉴임 보여주기위한것.
+
+
+<table border="1">
+    <tr>
+        <td>음식점이름</td>
+    </tr>
+
+<%
+     for(var i=0; i<rows.length; i++)
+     {
+        var oneItem = rows[i];
+%>
+    <tr>
+        <td><a href="/searchmap?resname=<%=oneItem.name%>"><%=oneItem.name%></a></td> //얘가 음식점 목록들
+    </tr>
+
+<%
+     }
+%>
+</table>
+
+</body>
+</html>
