@@ -1,119 +1,184 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="ROBOTS" ="NOINDEX, NOFOLLOW" />
+<meta http-equiv="-Type" ="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" ="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="C:\Users\hahyun\Desktop\backup\cssTest05-29.css" />
 
-    <title>회원가입</title>
-<script type="text/javascript">
-	windov.onload=function(){
-		doucument.getElementByID('my-form').onsubmit=function(){
-			var pass=document.getElementById('pass').value; //변수 pass를 문서 안에 있는 id='pass'의 value로 선언
-			var passCheck=document.getElementById('pass-check').value //변수 passCheck는 문서안에 있는 id="pass-check"로 선언
+<title>project homepage</title>
+</head>
 
-			if(pass==passCheck) { //변수 pass와 변수 passCheck가 일치하면
-				alert('success');
-			} else { //변수 pass와 변수 passCheck가 일치하지 않으면
-				alert('retry') ;
-					return false;
-			}
+<script>
+function setCookie( name, value, expiredays ) 
+{ 
+	var todayDate = new Date(); 
+	todayDate.setDate( todayDate.getDate() + expiredays ); 
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+}
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) 
+	{
+		var c = $.trim(ca[i]);
+		if (c.indexOf(name)==0){
+			return c.substring(name.length,c.length);
 		}
 	}
-
-
-
-function checkpassword()
-{
-	var pass=document.getElementById('pwd1').value;
-	var pass2=document.getElementById('pwd2').value;
-
-	if(pass==pass2)
-	{
-		alert("비밀번호 일치");
-	}else {
-		alert("비밀번호 일치하지 않습니다.");
-	}
+	return "";
 }
-
-
-
+$(document).ready(function(){
+	$(".close_layer").click(function(){
+		$(this).parent().parent().parent().css("display","none");
+	});
+	
+	$(".close_today").click(function(){
+		if($(this).is(":checked") == true){
+			setCookie("layer"+$(this).val(), "N", 1);
+			$(this).parent().parent().parent().css("display","none");
+		}
+	});
+});
 </script>
-</head>
-<body>
+
+<!--wrap-->
 <div id="wrap">
 	<!--header-->
-    <div id="header">
-    <h1><a href="C:\Users\hahyun\Desktop\project\main.html">BGS</a></h1>
-    <div class="theme_setting" style="display:none" onmouseover="LoginTheme.openLayer()" onmouseout="LoginTheme.closeLayer()">
-    <a href="javascript:LoginTheme.redirectConfigWindow()" onclick="nclks('ltg.setting',this,event)" class="sp btn_setting"><span class="blind">헤더 테마 설정</span></a>
-    </div>
-    <!--//header-->
-    <!--container-->
-    <div id="container">
-    	<div id="content">
-		<form action="/register" method="post">
-        	<div class="title">
-    		<legend>회원가입</legend>
-            </div>
-            <div class="gender">
-            <p>
-        		성별:
-            	<input type="radio" name="gender" value="man">남자
-	            <input type="radio" name="gender" value="woman">여자
-	        </p>
-			</div>
+	<div id="header">
+	<div class="top_title">
+		<div class="top_title1">
+			<div class="gnb"><!--우측 베너-->
+				<ul>
+            	<li><a href="/login">로그인</a></li>
+				<li><a href="/register">회원가입</a></li>
+				<li><a href="javascript:goToLogin();">마이페이지</a></li>
+				<li><a href="/?page=cscenter">고객센터</a></li>
+				</ul>
+			 </div><!--//우측 베너-->
+		</div><!--top_title1-->
+	</div><!--top_title-->
 
-            <div class="id">
-            <p><label>아이디 : <input type="text" id='userid' name="ID" placeholder="아이디 입력" required></label>
-						<input onclick='checkId()' type='button' name='checker' value='중복확인'></p>
+	<div class="header_wrap">
+		<div class="header_logo"><a href="/index.asp"><!--main.html로 링크점-->
+			<img src="C:\Users\hahyun\hell-project\fooding\longlogo.png" alt="로고"/>
+			</a></div><!--로고-->
+		<div class="header_search"><!--검색박스-->
+			<div class="input_box" style="float:left;">
+			<div class="search_box" style="float:right;">
+            	<input id="sv" type="text" class="text_input" value="" align="right"></div><!--우측 검색 칸-->
+			<div class="search_box1"><img src="#" style="cursor: pointer;" id="search_btn"/></div>
+		</div><!--//header_search-->
+	</div><!--//header_wrap-->
+	
+    <div class="lnb"><!--Center menu-->
+		<ul>
+		<li><a href="/?page=sub&cate_code=01">HOME</a></li>
+		<li><a href="/?page=sub&cate_code=02">오늘의 추천메뉴</a></li>
+		<li><a href="/?page=sub&cate_code=03">검색하기</a></li>
+        <li><a href="/?page=sub&cate_code=04">카테고리</a></li>
+        <li><a href="/?page=sub&cate_code=05">게시판</a></li>
+		<li><a href="/?page=sub&cate_code=06">고객센터</a></li>
+		</ul>
+	</div><!--lnb//center_menu-->
+</div><!--//header-->
+        
+        
+<!--main content-->
 
-	        </div>
-
-            <div class="password">
-            <p><label>비밀번호 : <input type="password" id='pwd1' name="pwd" placeholder="비밀번호 입력" required></label></p>
-    	    <p><label>비밀번호 확인 : <input type="password" id='pwd2' name="pwd2" placeholder="비밀번호 입력 확인" required></label>
-					<input onclick='checkpassword()' type='button' name='checker' value='비밀번호확인'></p>
-        	</div>
-
-      		<div class="name">
-            <p><label>이름 : <input type="text" name="Name" placeholder="이름 입력" required></label></p>
-					 </div>
-
-					<div class="nick">
-					<p><label>닉네임 : <input type="text" name="nick" placeholder="닉네임 입력"required></label></p>
+<div>
+<div id="container">
+    	<div id="content" position="absoulte" align="center">
+				<form action="/register" method="post">
+		        	<div class="title">
+		    		<legend>회원가입</legend>
+		            </div>
+		            <div class="gender">
+		            <p>
+		        		성별:
+		            	<input type="radio" name="gender" value="man">남자
+			            <input type="radio" name="gender" value="woman">여자
+			        </p>
 					</div>
 
-            <div class="e-mail">
-            <p><label>E-mail : <input type="email" name="email" placeholder="이메일 입력"required></label></p>
-            </div>
+		            <div class="id">
+		            <p><label>아이디 : <input type="text" id='userid' name="ID" placeholder="아이디 입력" required></label>
+								<input onclick='checkId()' type='button' name='checker' value='중복확인'></p>
 
-            <div class="number">
-			<p>
-        		전화번호
+			        </div>
 
-    	        <input type="tel" name="phoneNumber" placeholder=" -빼고 숫자만 입력" required>
-        	</p>
-            </div>
+		            <div class="password">
+		            <p><label>비밀번호 : <input type="password" id='pwd1' name="pwd" placeholder="비밀번호 입력" required></label></p>
+		    	    <p><label>비밀번호 확인 : <input type="password" id='pwd2' name="pwd2" placeholder="비밀번호 입력 확인" required></label>
+							<input onclick='checkpassword()' type='button' name='checker' value='비밀번호확인'></p>
+		        	</div>
 
-            <div class="e-mail agree">
-	        <p>
-    	    	E-mail 수신 :
-	 			<input type="radio" name="receive" value="agree"> 동의
-    	        <input type="radio" name="receive" value="reject"> 거부
-        	</p>
-            </div>
+		      		<div class="name">
+		            <p><label>이름 : <input type="text" name="Name" placeholder="이름 입력" required></label></p>
+							 </div>
 
-            <div class="favorite food">
-            <p>
-        	관심 음식 :
-        	     <input type="checkbox" name="favorite" value="pizza">피자
-            	 <input type="checkbox" name="favorite" value="hamburger">햄버거
-	             <input type="checkbox" name="favorite" value="chciken">치킨
-    	    </p>
-            </div>
+							<div class="nick">
+							<p><label>닉네임 : <input type="text" name="nick" placeholder="닉네임 입력"required></label></p>
+							</div>
 
-	       <input type="submit" value="가입">
-	     </form>
+		            <div class="e-mail">
+		            <p><label>E-mail : <input type="email" name="email" placeholder="이메일 입력"required></label></p>
+		            </div>
+
+		            <div class="number">
+					<p>
+		        		전화번호
+
+		    	        <input type="tel" name="phoneNumber" placeholder=" -빼고 숫자만 입력" required>
+		        	</p>
+		            </div>
+
+		            <div class="e-mail agree">
+			        <p>
+		    	    	E-mail 수신 :
+			 			<input type="radio" name="receive" value="agree"> 동의
+		    	        <input type="radio" name="receive" value="reject"> 거부
+		        	</p>
+		            </div>
+
+		            <div class="favorite food">
+		            <p>
+		        	관심 음식 :
+		        	     <input type="checkbox" name="favorite" value="pizza">피자
+		            	 <input type="checkbox" name="favorite" value="hamburger">햄버거
+			             <input type="checkbox" name="favorite" value="chciken">치킨
+		    	    </p>
+		            </div>
+
+			       <input type="submit" value="가입">
+			     </form>
 	     </div>
-    	</body>
-	   </html>
+
+      </div>
+
+</div>
+    
+<div class="footer_warp">
+	<div class="bottom_logo"> <img src="#"/> </div>
+		<div class="bottom_add"></div>
+	</div>
+	<div class="bottom_add soft_footer">
+		<p>
+			제작자 : 컴퓨터 정보공학과 BGS
+			TEL : 031-123-4567
+			주소 : 경기도 의왕시<br>
+		</p>
+	</div>
+</div>
+<br />
+
+<div class="notice_text">
+	<p class="quick_text_top01">&nbsp </p>
+	<span class="quick_text top_btn">TOP</span>
+	<span class="quick_text1 top_btn">위로</span>
+	</div><!--위로-->
+</div><!--퀵배너-->
+</body>
+</html>
